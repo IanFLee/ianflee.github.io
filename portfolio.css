@@ -1,0 +1,88 @@
+body {
+  margin: 0;
+}
+
+#container {
+  border: solid pink;
+  display: grid;
+  grid-template-columns: repeat(17, 1fr);
+  grid-auto-rows: repeat(6, 1fr);
+  text-align: center;
+}
+
+#background {
+  position: absolute;
+  background-image: url('https://s-media-cache-ak0.pinimg.com/originals/21/64/56/216456a3283da40098988cac578356d1.jpg');
+  width: 98vw;
+  margin: 0;
+  opacity: .3;
+  background-size: 100%;
+  background-repeat: repeat-y;
+  z-index: -1;
+}
+
+div, img, p {
+  border: none;
+}
+
+#hrBorder {
+  grid-column: 1/18;
+  grid-row: 4/5;
+}
+
+#header {
+  grid-column: 2/17;
+  grid-row: 1/2;
+  display: grid;
+  grid-template-columns: repeat(17, 1fr);
+  grid-auto-rows: repeat(4, 1fr);
+  text-align: center;
+  margin-bottom: 10vh;
+}
+
+#sun {
+  width: 100%;
+  grid-column: 8/11;
+  grid-row: 1/2;
+}
+
+#name {
+  grid-column: 1/18;
+  grid-row: 2/3;
+  margin-top: -3%;
+  text-align: center;
+}
+
+#beliefs {
+  grid-column: 1/18;
+  grid-row: 3/4;
+  margin-top: -3%;
+}
+
+.pane {
+  grid-column: 2/17;
+  grid-row: 2/3;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: minmax(50px, auto);
+  grid-template-areas: "a p";
+}
+
+.about {
+  grid-area: a;
+  margin-left: 10%;
+  margin-right: 10%;
+	text-align: center;
+}
+
+.project {
+  grid-area: p;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+.separator {
+  grid-column: 2/17;
+  grid-row: 3/4;
+  margin-top: 4%;
+}
