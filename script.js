@@ -1,10 +1,20 @@
+/* TODO
+
+- background repeat-y
+- all content
+- contact info
+- 
+
+*/
+
 var body = document.body,
     html = document.documentElement;
 
-var bodyH = Math.max( body.scrollHeight, body.offsetHeight, 
-                       html.clientHeight, html.scrollHeight, html.offsetHeight );
+var bodyH = Math.max( body.scrollHeight, body.offsetHeight, html.clientHeight, html.scrollHeight, html.offsetHeight );
+
 
 doc.id('background').style.height = bodyH+'px';
+cl(bodyH);
 
 class doubleBorder extends HTMLElement {
   
@@ -18,7 +28,7 @@ class doubleBorder extends HTMLElement {
     
     var outerDiv = doc.ce();
     outerDiv.style.border = 'solid 7px';
-    outerDiv.style.borderRadius = '10px';
+   // outerDiv.style.borderRadius = '10px';
     var innerDiv = doc.ce();
 
     if (this.hasAttribute('title')) {
@@ -28,7 +38,7 @@ class doubleBorder extends HTMLElement {
       var whiteContainer = doc.ce();
       whiteContainer.style.textAlign = 'center';
       whiteContainer.style.border = 'solid 4px rgb(254, 102, 3)';
-      whiteContainer.style.borderRadius = '10px';
+     // whiteContainer.style.borderRadius = '10px';
       whiteContainer.style.backgroundColor = 'white';
       var title = doc.ce('h3');
       title.innerHTML = this.getAttribute('title');
@@ -38,9 +48,9 @@ class doubleBorder extends HTMLElement {
       hr.style.borderRadius = '15px';
       var desc = doc.ce();
       desc.style.marginTop = '10%';
-      desc.innerHTML = 'jigsaw is a library of mvc-type functions<br><br>';
+      desc.innerHTML = this.getAttribute('desc')+'<br><br>';
       var link = doc.ce();
-      link.innerHTML = 'github.com/asparism/jigsaw';
+      link.innerHTML = this.getAttribute('link');
       link.style.textDecoration = 'underline';
       link.style.marginBottom = '10%';
       doc.amc(whiteContainer, [title, hr, desc, link]);
