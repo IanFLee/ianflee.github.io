@@ -14,7 +14,6 @@ var bodyH = Math.max( body.scrollHeight, body.offsetHeight, html.clientHeight, h
 
 
 doc.id('background').style.height = bodyH+'px';
-cl(bodyH);
 
 class doubleBorder extends HTMLElement {
   
@@ -36,7 +35,6 @@ class doubleBorder extends HTMLElement {
       outerDiv.style.backgroundColor = 'black';
       
       var whiteContainer = doc.ce();
-      whiteContainer.style.textAlign = 'center';
       whiteContainer.style.border = 'solid 4px rgb(254, 102, 3)';
      // whiteContainer.style.borderRadius = '10px';
       whiteContainer.style.backgroundColor = 'white';
@@ -62,17 +60,30 @@ class doubleBorder extends HTMLElement {
       innerDiv.style.borderRadius = ' 7px';
     }
     
-    
     outerDiv.appendChild(innerDiv);
     container.appendChild(outerDiv);
+    
     var html = container.innerHTML;
 
     template.innerHTML = html;
     
     const instance = template.content.cloneNode(true);
+    
     shadowRoot.appendChild(instance);
 }
 
 }
 
 window.customElements.define('double-border', doubleBorder);
+
+listenAt('jigsaw', 'click', function() {
+  window.open('https://github.com/asparism/jigsaw');
+});
+
+listenAt('shareSwap', 'click', function() {
+  window.open('https://github.com/asparism/jigsaw');
+});
+
+listenAt('jigsaw', 'click', function() {
+  window.open('https://github.com/asparism/jigsaw');
+});
