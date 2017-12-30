@@ -1,8 +1,17 @@
+/* TODO
+
+- background repeat-y
+- all content
+- contact info
+- 
+
+*/
+
 var body = document.body,
     html = document.documentElement;
 
-var bodyH = Math.max( body.scrollHeight, body.offsetHeight, 
-                       html.clientHeight, html.scrollHeight, html.offsetHeight );
+var bodyH = Math.max( body.scrollHeight, body.offsetHeight, html.clientHeight, html.scrollHeight, html.offsetHeight );
+
 
 doc.id('background').style.height = bodyH+'px';
 
@@ -18,7 +27,7 @@ class doubleBorder extends HTMLElement {
     
     var outerDiv = doc.ce();
     outerDiv.style.border = 'solid 7px';
-    outerDiv.style.borderRadius = '10px';
+   // outerDiv.style.borderRadius = '10px';
     var innerDiv = doc.ce();
 
     if (this.hasAttribute('title')) {
@@ -26,9 +35,8 @@ class doubleBorder extends HTMLElement {
       outerDiv.style.backgroundColor = 'black';
       
       var whiteContainer = doc.ce();
-      whiteContainer.style.textAlign = 'center';
       whiteContainer.style.border = 'solid 4px rgb(254, 102, 3)';
-      whiteContainer.style.borderRadius = '10px';
+     // whiteContainer.style.borderRadius = '10px';
       whiteContainer.style.backgroundColor = 'white';
       var title = doc.ce('h3');
       title.innerHTML = this.getAttribute('title');
@@ -38,9 +46,9 @@ class doubleBorder extends HTMLElement {
       hr.style.borderRadius = '15px';
       var desc = doc.ce();
       desc.style.marginTop = '10%';
-      desc.innerHTML = 'jigsaw is a library of mvc-type functions<br><br>';
+      desc.innerHTML = this.getAttribute('desc')+'<br><br>';
       var link = doc.ce();
-      link.innerHTML = 'github.com/asparism/jigsaw';
+      link.innerHTML = this.getAttribute('link');
       link.style.textDecoration = 'underline';
       link.style.marginBottom = '10%';
       doc.amc(whiteContainer, [title, hr, desc, link]);
@@ -52,17 +60,30 @@ class doubleBorder extends HTMLElement {
       innerDiv.style.borderRadius = ' 7px';
     }
     
-    
     outerDiv.appendChild(innerDiv);
     container.appendChild(outerDiv);
+    
     var html = container.innerHTML;
 
     template.innerHTML = html;
     
     const instance = template.content.cloneNode(true);
+    
     shadowRoot.appendChild(instance);
 }
 
 }
 
 window.customElements.define('double-border', doubleBorder);
+
+listenAt('jigsaw', 'click', function() {
+  window.open('https://github.com/asparism/jigsaw');
+});
+
+listenAt('shareSwap', 'click', function() {
+  window.open('https://github.com/asparism/jigsaw');
+});
+
+listenAt('jigsaw', 'click', function() {
+  window.open('https://github.com/asparism/jigsaw');
+});
