@@ -1,0 +1,118 @@
+@media screen and (orientation: portrait) {
+  
+  .pane {
+    grid-template-columns: auto;
+    grid-template-areas: "l" "r";
+  }
+  
+  #container {
+  margin-left: 0%;
+  margin-right: 0%;
+}
+  
+  .paneL {
+    margin-top: -10%;
+    margin-bottom: 5%;
+  }
+  
+  .paneR {
+    margin-bottom: -10%;
+  }
+}
+
+
+
+body {
+  margin: 0;
+  text-align: center;
+  font-family: 'Kanit', sans-serif;
+}
+
+#container {
+  margin-left: 10%;
+  margin-right: 10%;
+  background-color: rgba(255, 255, 255, .5);
+  border-left: solid 1px rgba(155, 0 , 155, .1);
+  border-right: solid 1px rgba(155, 0 , 155, .1);
+}
+
+#background {
+  top: 0;
+  position: absolute;
+  background-image: url('https://cdn.glitch.com/cf016923-bfba-4b45-88a5-68d4c219b453%2Fwhite%20background.png?1514708208806');
+  width: 100%;
+  margin: 0;
+  opacity: .2;
+  background-size: 100%;
+  background-repeat: repeat-y;
+  z-index: -1;
+}
+
+div, img, p {
+  border: none;
+}
+
+img {
+  width: 50%;
+}
+
+a > img{
+  max-width: 50%;
+}
+
+#hrBorder {
+  grid-column: 1/18;
+  grid-row: 4/5;
+}
+
+#header {
+  display: grid;
+  grid-template-columns: repeat(17, 1fr);
+  grid-auto-rows: repeat(4, 1fr);
+  margin: 5%;
+}
+
+#sun {
+  width: 100%;
+  grid-column: 8/11;
+  grid-row: 1/2;
+}
+
+#name {
+  grid-column: 1/18;
+  grid-row: 2/3;
+  margin-top: -3%;
+}
+
+#beliefs {
+  grid-column: 1/18;
+  grid-row: 3/4;
+  margin-top: -3%;
+}
+
+.pane {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: minmax(50px, auto);
+  grid-template-areas: "l r";
+  margin-top: 10vh;
+  margin-bottom: 10vh;
+  align-items: center;
+}
+
+.paneL {
+  grid-area: l;
+  margin-left: 10%;
+  margin-right: 10%;
+	text-align: center; 
+}
+
+.paneR {
+  grid-area: r;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+.separator {
+  padding-bottom: 10%;
+}
