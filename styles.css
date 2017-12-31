@@ -6,13 +6,14 @@
   }
   
   #container {
-  margin-left: 0%;
-  margin-right: 0%;
+    margin-left: 0%;
+    margin-right: 0%;
 }
   
   .paneL {
     margin-top: -10%;
     margin-bottom: 5%;
+	  border: solid;
   }
   
   .paneR {
