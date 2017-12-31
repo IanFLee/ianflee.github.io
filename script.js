@@ -2,8 +2,7 @@
 
 - background repeat-y
 - all content
-- contact info
-- 
+- fonts
 
 */
 
@@ -26,18 +25,19 @@ class doubleBorder extends HTMLElement {
     var container = doc.ce();
     
     var outerDiv = doc.ce();
-    outerDiv.style.border = 'solid 7px';
+    outerDiv.style.border = 'solid 6px';
    // outerDiv.style.borderRadius = '10px';
     var innerDiv = doc.ce();
 
     if (this.hasAttribute('title')) {
       
-      outerDiv.style.backgroundColor = 'black';
+    //  outerDiv.style.backgroundColor = 'blue';
       
       var whiteContainer = doc.ce();
-      whiteContainer.style.border = 'solid 4px rgb(254, 102, 3)';
+      whiteContainer.style.border = 'solid 3px rgb(254, 102, 3)';
      // whiteContainer.style.borderRadius = '10px';
-      whiteContainer.style.backgroundColor = 'white';
+
+      whiteContainer.style.backgroundColor = 'rgb(253, 253, 253)';
       var title = doc.ce('h3');
       title.innerHTML = this.getAttribute('title');
       var hr = doc.ce('hr');
@@ -51,13 +51,21 @@ class doubleBorder extends HTMLElement {
       link.innerHTML = this.getAttribute('link');
       link.style.textDecoration = 'underline';
       link.style.marginBottom = '10%';
+      whiteContainer.style.padding = '5%';
+      
       doc.amc(whiteContainer, [title, hr, desc, link]);
       
       innerDiv.appendChild(whiteContainer);
       innerDiv.style.cursor = 'pointer';
     } else {
-      innerDiv.style.border = 'solid 2px rgb(252, 254, 4)';
-      innerDiv.style.borderRadius = ' 7px';
+      innerDiv.style.backgroundColor = 'rgb(252, 254, 4)';
+      innerDiv.style.height = '3px';
+      //innerDiv.style.borderRadius = ' 7px';
+
+      
+      outerDiv.style.border = 'solid 2px rgb(40, 40, 40)';
+      outerDiv.style.marginLeft = '5%';
+      outerDiv.style.marginRight = '5%';
     }
     
     outerDiv.appendChild(innerDiv);
@@ -81,9 +89,9 @@ listenAt('jigsaw', 'click', function() {
 });
 
 listenAt('shareSwap', 'click', function() {
-  window.open('https://github.com/asparism/jigsaw');
+  window.open('https://share-swap.glitch.me');
 });
 
-listenAt('jigsaw', 'click', function() {
-  window.open('https://github.com/asparism/jigsaw');
+listenAt('navBlocks', 'click', function() {
+  window.open('https://vr-nav-blocks.glitch.me');
 });
