@@ -96,7 +96,7 @@ a > img{
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: minmax(50px, auto);
-  grid-template-areas: "r l";
+  grid-template-areas: "l r";
   margin-top: 10vh;
   margin-bottom: 10vh;
   align-items: center;
