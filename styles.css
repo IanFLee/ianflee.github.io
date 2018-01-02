@@ -8,6 +8,7 @@
   #container {
     margin-left: 0%;
     margin-right: 0%;
+	  border: solid orange;
 }
   
   .paneL {
