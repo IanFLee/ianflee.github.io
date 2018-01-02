@@ -1,32 +1,3 @@
-@media screen and (orientation: portrait) {
-  
-  .pane {
-    grid-template-columns: repeat(1, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-  }
-  
-  #container {
-    margin-left: 0%;
-    margin-right: 0%;
-	  border: solid orange;
-}
-  
-  .paneL {
-    margin-top: -10%;
-    margin-bottom: 5%;
-    grid-column: 1/2;
-    grid-row: 1/2;
-  }
-  
-  .paneR {
-    margin-bottom: -10%;
-    grid-column: 1/2;
-    grid-row: 2/3;
-  }
-}
-
-
-
 body {
   margin: 0;
   text-align: center;
@@ -44,7 +15,7 @@ body {
 #background {
   top: 0;
   position: absolute;
-  background-image: url('asparism.github.io/assets/white_background.png');
+  background-image: url('https://cdn.glitch.com/cf016923-bfba-4b45-88a5-68d4c219b453%2Fwhite%20background.png?1514708208806');
   width: 100%;
   margin: 0;
   opacity: .2;
@@ -103,6 +74,30 @@ a > img{
   margin-top: 10vh;
   margin-bottom: 10vh;
   align-items: center;
+}
+
+
+
+@media screen and (orientation: portrait) {
+  
+  .pane {
+    grid-template-columns: auto;
+    grid-template-areas: "l" "r";
+  }
+  
+  #container {
+  margin-left: 0%;
+  margin-right: 0%;
+}
+  
+  .paneL {
+    margin-top: -10%;
+    margin-bottom: 5%;
+  }
+  
+  .paneR {
+    margin-bottom: -10%;
+  }
 }
 
 .paneL {
