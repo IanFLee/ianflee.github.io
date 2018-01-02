@@ -2,8 +2,7 @@
   
   .pane {
     grid-template-columns: repeat(1, 1fr);
-    grid-template-areas: "l"
-	    		 "r";
+    grid-template-rows: repeat(2, 1fr);
   }
   
   #container {
@@ -14,11 +13,14 @@
   .paneL {
     margin-top: -10%;
     margin-bottom: 5%;
-	  border: solid green;
+    grid-column: 1/2;
+    grid-row: 1/2;
   }
   
   .paneR {
     margin-bottom: -10%;
+    grid-column: 1/2;
+    grid-row: 2/3;
   }
 }
 
