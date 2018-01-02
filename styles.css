@@ -76,7 +76,22 @@ a > img{
   align-items: center;
 }
 
+.paneL {
+  grid-area: l;
+  margin-left: 10%;
+  margin-right: 10%;
+	text-align: center; 
+}
 
+.paneR {
+  grid-area: r;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+.separator {
+  padding-bottom: 10%;
+}
 
 @media screen and (orientation: portrait) {
   
@@ -98,21 +113,4 @@ a > img{
   .paneR {
     margin-bottom: -10%;
   }
-}
-
-.paneL {
-  grid-area: l;
-  margin-left: 10%;
-  margin-right: 10%;
-	text-align: center; 
-}
-
-.paneR {
-  grid-area: r;
-  margin-left: 10%;
-  margin-right: 10%;
-}
-
-.separator {
-  padding-bottom: 10%;
 }
