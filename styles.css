@@ -2,7 +2,8 @@
   
   .pane {
     grid-template-columns: auto;
-    grid-template-areas: "l" "r";
+    grid-template-areas: "l"
+	    		 "r";
   }
   
   #container {
@@ -13,6 +14,7 @@
   .paneL {
     margin-top: -10%;
     margin-bottom: 5%;
+	  border: solid green;
   }
   
   .paneR {
