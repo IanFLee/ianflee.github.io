@@ -1,6 +1,2 @@
-# asparism.github.io
+# my name is asparism
 
-todo:
-
-- confirm background loads y properly
-- confirm mobile flips panes left and right -> pane top and bottom
