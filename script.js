@@ -48,17 +48,13 @@ class doubleBorder extends HTMLElement {
 		  desc.style.marginTop = '10%';
 		  desc.innerHTML = this.getAttribute('desc')+'<br><br>';
 		  
-		  var link = doc.ce();
-		  link.innerHTML = this.getAttribute('link');
-		  link.style.textDecoration = 'underline';
-		  link.style.marginBottom = '10%';
-		  
 
-		  doc.amc(whiteContainer, [title, hr, desc, link]);
+		  doc.amc(whiteContainer, [title, hr, desc]);
 		  
 		  innerDiv.appendChild(whiteContainer);
 		  
-		} else {
+		}
+    else {
 		  innerDiv.style.backgroundColor = 'rgb(252, 254, 4)';
 		  innerDiv.style.height = '3px';
 		  innerDiv.style.cursor = 'pointer';
@@ -84,18 +80,6 @@ class doubleBorder extends HTMLElement {
 }
 
 window.customElements.define('double-border', doubleBorder);
-
-listenAt('jigsaw', 'click', function() {
-  window.open('https://github.com/asparism/jigsaw');
-});
-
-listenAt('shareSwap', 'click', function() {
-  window.open('https://share-swap.glitch.me');
-});
-
-listenAt('navBlocks', 'click', function() {
-  window.open('https://vr-nav-blocks.glitch.me');
-});
 
 
 var contentH = doc.id('container').offsetHeight;
